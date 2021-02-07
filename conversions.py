@@ -4,8 +4,9 @@ import scipy
 import os
 
 ## define standard constant variables
-p_ref = 101325
-T_ref = 298.15
+p_ref = 101325 # Pa
+T_ref = 298.15 # K
+R_air = 287 # J/kg-K
 
 
 def KtoC(temp):
