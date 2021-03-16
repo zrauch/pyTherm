@@ -145,7 +145,6 @@ def waterProperties(propertyNames, propertyValues, printOutput):
 		enthalpy = prop('H',propertyNames[0],conversions.CtoK(propertyValues[0]),propertyNames[1],propertyValues[1],'Water') # J/kg
 		entropy = prop('S',propertyNames[0],conversions.CtoK(propertyValues[0]),propertyNames[1],propertyValues[1],'Water') # J/kg-K
 		pressure = prop('P',propertyNames[0],conversions.CtoK(propertyValues[0]),propertyNames[1],propertyValues[1],'Water')
-		print('pressure =',pressure)
 
 	elif propertyNames[0]=='P' and propertyNames[1]=='T': # T input must be in C
 		rho = prop('D',propertyNames[0],conversions.BarToPa(propertyValues[0]),propertyNames[1],conversions.CtoK(propertyValues[1]),'Water') # kg/m3
