@@ -68,6 +68,18 @@ def gasProperties(propertyNames, propertyValues, gas ,printOutput): ## ALL INPUT
 		s = prop('S',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
 		rho = prop('D',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
 
+	elif propertyNames[0]=='P' and propertyNames[1]=='H': # P must be in Pa, T must be in K
+		u = prop('U',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
+		h = propertyValues[1]
+		s = prop('S',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
+		rho = prop('D',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
+
+	elif propertyNames[0]=='P' and propertyNames[1]=='S': # P must be in Pa, T must be in K
+		u = prop('U',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
+		h = prop('H',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
+		s = propertyValues[1]
+		rho = prop('D',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
+
 	elif propertyNames[0]=='T' and propertyNames[1]=='P': # P must be in Pa, T must be in K
 		u = prop('U',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
 		h = prop('H',propertyNames[0],propertyValues[0],propertyNames[1],propertyValues[1],gas)
